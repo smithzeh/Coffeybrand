@@ -115,5 +115,8 @@ const PORT = process.env.PORT || 4000;
 server.listen(PORT, () =>
   console.log(`🚀 Server running on port ${PORT}`)
 );
+app.get("/", (req, res) => {
+  res.send("CoffeyBrand API is running 🚀");
+});
 
 module.exports = { app, server, io, onlineUsers };
